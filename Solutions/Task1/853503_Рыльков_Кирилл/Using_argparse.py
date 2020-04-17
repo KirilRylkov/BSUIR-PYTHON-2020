@@ -5,11 +5,11 @@ import random
 
 def create_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-n','--number', default =1, type=int)
-    parser.add_argument('-i','--input_path', default='Text.txt', type=str)
-    parser.add_argument('-o','--output_path',default='Output.txt', type=str)
-    parser.add_argument('-f','--fibonacci_number', default =100,type=int)
-    parser.add_argument('-c','--count',default =10,type=int)
+    parser.add_argument('-n','--number', default = 1, type = int)
+    parser.add_argument('-i','--input_path', default = 'Text.txt', type = str)
+    parser.add_argument('-o','--output_path',default = 'Output.txt', type = str)
+    parser.add_argument('-f','--fibonacci_number', default = 100,type = int)
+    parser.add_argument('-c','--count',default = 10,type = int)
     return parser
 
 def read_from_file(path):
@@ -106,12 +106,6 @@ def sort(type):
         merge_sort(A)
     write_to_file(A, namespace)
     print(A)
-
-def fibonacci_numbers(n):
-    fibonacci_numbers = [0,1] + [0] * (n - 1)
-    for i in range(2,n + 1):
-        fibonacci_numbers[i] = fibonacci_numbers[i - 1] + fibonacci_numbers[i - 2]
-        yield fibonacci_numbers[i - 1] + fibonacci_numbers[i - 2]
 
 def generator_fibonacci_numbers(n):
     first_number,second_numer = 0,1
