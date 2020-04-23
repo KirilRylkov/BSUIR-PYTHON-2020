@@ -64,7 +64,6 @@ class Vector:
             if 0 <= item < len(self.values):
                 return self.values[item]
 
-
     def __setitem__(self, key, value):
         if type(value)!=int:
             raise Exception("key must be numbers")
@@ -72,8 +71,6 @@ class Vector:
             if 0 <= key < len(self.values):
                 self.values[key] = value
                 return self
-
-
 
     def __neg__(self):
         return Vector(list(map(lambda x: -x, self.values)))
